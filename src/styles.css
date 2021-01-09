@@ -1,0 +1,295 @@
+.App {
+  padding: 5px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.home-layout {
+  margin: auto;
+  color: BLACK;
+  max-width: 900px;
+}
+
+.introduction-section {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-header {
+  width: 100%;
+  display: flex;
+}
+
+.NavButtonsGroup {
+  width: 100%;
+  display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.MuiButton-root {
+  color: BLACK !important;
+}
+
+.Mui-selected {
+  color: gold !important;
+}
+
+.MuiTabs-indicator {
+  background-color: gold !important;
+}
+
+.MuiTab-textColorPrimary {
+  color: BLACK !important;
+}
+
+.Specialties {
+  margin-top: 10px;
+}
+
+.Specialties svg {
+  fill: BLACK;
+
+  width: 3em;
+  height: auto;
+  margin: auto;
+}
+
+.ProjectTile TextRight svg {
+  fill: BLACK;
+  display: inline-block;
+  width: 3em;
+  height: auto;
+  margin-right: auto;
+}
+
+.Specialties img {
+  width: 3em;
+  height: auto;
+  margin: auto;
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.Specialties p {
+  text-align: center;
+}
+
+.PicContainer {
+  position: relative;
+}
+
+.PicContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.OverLay {
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(148, 142, 142);
+  transition: 1s;
+}
+
+.PicContainer:hover .OverLay {
+  opacity: 0.5;
+}
+
+.description-contRight {
+  color: white;
+  position: relative;
+  right: 0px;
+  background-color: black;
+  padding: 20px 10px;
+  margin: 0 0 20px;
+  border-radius: 5px;
+  transition: 1s;
+  z-index: 1;
+}
+
+.description-contLeft {
+  color: white;
+  position: relative;
+  left: 0px;
+  background-color: black;
+  padding: 20px 10px;
+  margin: 0 0 20px;
+  border-radius: 5px;
+  transition: 1s;
+  z-index: 1;
+}
+
+.description-contRight:hover {
+  right: 20px;
+}
+
+.description-contLeft:hover {
+  left: 20px;
+}
+
+.TextRight {
+  text-align: right;
+}
+
+.TextLeft {
+  text-align: left;
+}
+
+.ProjectTile {
+  border-radius: 5px;
+  border-left: 5px solid #202020;
+  border-bottom: 5px solid #202020;
+  border-color: BLACK;
+  padding: 20px;
+}
+
+.Header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 0px;
+}
+
+.ProjectTileHeaderHover {
+  transition: all 1s;
+  padding-right: 15px;
+}
+
+.ProjectTileHeader {
+  transition: all 1s;
+  padding-right: 0px;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.MuiSvgIcon-root {
+  color: BLACK;
+}
+
+.MuiButton-outlined {
+  border: 1px solid BLACK !important;
+}
+
+.MuiIconButton-root {
+  color: BLACK !important;
+}
+
+.SectionPadding {
+  padding-top: 75px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.AboutHeader {
+  margin-left: -40px !important;
+}
+
+.AboutPage p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.AboutPage p:not(:first-child) {
+  padding-left: 20px;
+}
+
+.AboutSection {
+  margin-left: -20px;
+}
+
+.ProjectFooter {
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectFooter .MuiButton-label {
+  flex-direction: column;
+  display: flex !important;
+}
+
+.image-gallery-description {
+  top: 0;
+  bottom: inherit !important;
+  border: 2px solid red;
+}
+
+.FeaturedProjectHeader {
+  color: blue;
+}
+
+/*SCROLL BAR CSS*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.CenterModal {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/*MEDIA QUERY SECTION FOR MOBILE OPTIMAZATION*/
+
+@media only screen and (max-width: 750px) {
+  .CenterModal {
+    width: 100%;
+  }
+  .Specialties {
+    display: flex;
+  }
+  .home-layout .AboutHeader {
+    margin-left: 0px !important;
+  }
+
+  .AboutSection {
+    margin-left: 0px !important;
+  }
+}
+
+/*Full Collection button Style*/
+.FullCollectionButtonContainer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin: auto;
+}
