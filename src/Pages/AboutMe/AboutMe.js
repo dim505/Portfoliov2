@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import ContactSection from "./ContactSection";
+import ContactSection from "../SharedPages/Contact/ContactSection";
 import Fade from "react-reveal/Fade";
 
 /* 

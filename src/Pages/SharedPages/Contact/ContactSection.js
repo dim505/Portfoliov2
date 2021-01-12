@@ -5,11 +5,14 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import React, { useEffect, useState, useContext } from "react";
 import ContactModal from "./ContactModal";
+import Fade from "react-reveal/Fade";
+
 export default function ContactSection() {
   const [OpnModal, SetOpnModal] = useState(false);
 
   const CloseModal = () => SetOpnModal(false);
   return (
+   <Fade> 
     <div className="contact-section SectionPadding">
       <Typography variant="h5" gutterBottom>
         Feel Free to reach out
@@ -49,5 +52,6 @@ export default function ContactSection() {
 
       <ContactModal OpnModal={OpnModal} CloseModal={CloseModal} />
     </div>
+    </Fade>
   );
 }

@@ -1,0 +1,12 @@
+
+.ProjectFooter {
+  display: flex;
+  justify-content: center;
+}
+
+
+.ProjectFooter .MuiButton-label {
+  flex-direction: column;
+  display: flex !important;
+}
+

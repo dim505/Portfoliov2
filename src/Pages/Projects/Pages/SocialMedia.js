@@ -70,10 +70,7 @@ export default function SocialMedia(props) {
         end logistics of VOIP calling when responding to TwiML.
       </p>
 
-      <p>
-        Please click on the Github picture to see my code or my live picture to
-        see the app live!!
-      </p>
+
     </div>
   );
 }

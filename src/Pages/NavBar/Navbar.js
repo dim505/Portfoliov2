@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { NavLink } from "react-router-dom";
-
+import "./navbar.css"
 const NavBar = () => {
   return (
     <div className="home-header">

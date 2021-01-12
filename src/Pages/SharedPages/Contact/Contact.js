@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import * as Yup from "yup";
 import Typography from "@material-ui/core/Typography";
 import Axios from "axios";
-import DialogBox from "./DialogBox";
+import DialogBox from "../../../SharedFunctions/DialogBox";
 
 //rules that enforced data validation
 const validationSchema = Yup.object({
@@ -74,7 +74,11 @@ class Contact extends Component {
     return (
       <React.Fragment>
         <div>
-          <Paper elevation={3}>
+          <Paper
+            classes={{
+              root: "ContactMe"
+            }}
+          elevation={3}>
             <Typography
              
               variant="h5"

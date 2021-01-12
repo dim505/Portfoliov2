@@ -1,14 +1,13 @@
 import React from "react";
-import "./styles.css";
-import BigBangStarField from "react-big-bang-star-field";
-import NavBar from "./Navbar";
+import "./Global.css";
+import NavBar from "./Pages/NavBar/Navbar";
 import { Route } from "react-router-dom";
-import AboutMe from "./AboutMe";
-import HomePage from "./HomePage";
+import AboutMe from "./Pages/AboutMe/AboutMe";
+import HomePage from "./Pages/Home/HomePage";
 import ParticlesBg from "particles-bg";
-import Projects from "./Projects";
-import ProjectItem from "./ProjectItem";
-import ContactSection from "./ContactSection";
+import Projects from "./Pages/Projects/Projects";
+import ProjectItem from "./Pages/Projects/ProjectItem";
+import ContactSection from "./Pages/SharedPages/Contact/ContactSection";
 
 export default function App() {
   return (

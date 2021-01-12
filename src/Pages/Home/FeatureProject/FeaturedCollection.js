@@ -34,7 +34,7 @@ export default function FeaturedCollection() {
       ProjectName: "AMS (Tenant Side)",
       ProjectShortDesc:
         "React js web app that allows a tenant to pay rent and see news related to his apartment",
-      ProjectInfoUrl: `AMSTS`,
+      ProjectInfoUrl: `AMS_TS`,
       ProjectImageURL:
         "https://shellstorage123.blob.core.windows.net/reactams/TS (3).JPEG",
       ProjectGithubLink: "https://github.com/dim505/ApartmentMangementSystem",

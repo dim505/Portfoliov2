@@ -1,27 +1,28 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Fade from "react-reveal/Fade";
-import PowerShell from "./PowerShell";
+import PowerShell from "./Pages/PowerShell/PowerShell";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "./Pages/SocialMedia";
 import Button from "@material-ui/core/Button";
 import HomeIcon from "@material-ui/icons/Home";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
-import AMS_TS from "./AMS_TS";
-import AMS_LL from "./AMS_LL";
-import Webstore from "./webstore";
-import TicTacToe from "./TicTacToe";
-import Weatherapp from "./weatherapp";
-import PythonWikiCrawler from "./PythonWikiCrawler";
-import AMS from "./ams";
-import Dms from "./dms";
-import CSharpCalc from "./CSharpCalc";
-import JavascriptCalc from "./JavascriptCalc";
-import { ApiCall } from "./ApiCall";
+import AMS_TS from "./Pages/AMS_TS";
+import AMS_LL from "./Pages/AMS_LL";
+import Webstore from "./Pages/webstore";
+import TicTacToe from "./Pages/TicTacToe";
+import Weatherapp from "./Pages/weatherapp";
+import PythonWikiCrawler from "./Pages/PythonWikiCrawler";
+import AMS from "./Pages/ams";
+import Dms from "./Pages/dms";
+import CSharpCalc from "./Pages/CSharpCalc";
+import JavascriptCalc from "./Pages/JavascriptCalc";
+import { ApiCall } from "../../SharedFunctions/ApiCall";
 import { Link } from "react-router-dom";
-import PortfolioV1 from "./PortfolioV1";
+import PortfolioV1 from "./Pages/PortfolioV1";
+import "./Project.css"
 
 export default function ProjectItem(props) {
   const [header, SetHeader] = useState("");

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 
+
 const IntroductionSection = () => {
   return (
     <div className="introduction-section">
