@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 export default function PythonWikiCrawler(props) {
   return (
-    <div>
+    <div id="PythonWikiCrawler">
       <p>
         <a
           href="https://www.huffpost.com/entry/wikipedia-philosophy_n_1093460"
@@ -12,7 +12,9 @@ export default function PythonWikiCrawler(props) {
           Legend has it that{" "}
         </a>{" "}
         95% of all pages are linked to the{" "}
-        <a href="https://en.wikipedia.org/wiki/Philosophy">
+        <a href="https://en.wikipedia.org/wiki/Philosophy"
+        target="_blank"
+        >
           wikipedia Philosophy Page
         </a>
         . If you click on the first link of a wikipedia page it will lead to an
@@ -21,16 +23,30 @@ export default function PythonWikiCrawler(props) {
       </p>
 
       <p>
-        I made a Python script to test that! It accepts start and end links. It
+        I made a Python script to test that!
+        </p> 
+
+        <ol>
+                  <li>   It accepts start and end links.  </li> 
+                  <li>         It
         would try to get to the destination link starting from the starting
-        link. From there, it will traverse various pages by following the theory
+        link.</li>
+
+        <li>  From there, it will traverse various pages by following the theory
         of extracting the first non-parenthesized, non-italicized link that does
-        not have any external links or links to the current page. It will also
+        not have any external links or links to the current page. </li>
+
+        <li>It will also
         show you the path it takes trying to get to the destination page
-      </p>
+  </li>
+
+        </ol>
+        
+
+      
 
       <p>
-        If you would like to test my theory ,{" "}
+        If you would like to test my theory,{" "}
         <a href="https://www.xefer.com/wikipedia" target="_blank">
           {" "}
           please visit here{" "}

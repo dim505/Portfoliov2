@@ -1,14 +1,31 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider"
+
 export default function TicTacToe(props) {
   return (
     <div>
+
+<Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
+        Summary
+      </Typography>
+      
       <p>
-        {" "}
-        My Tic Tac Toe game has elements of the Material UI framework. It has
-        single and multiplayer mode. Please click on the GITHUB picture below to
-        see my code or the LIVE picture to see my app live!
+       I have a Tic Tac Toe game that supports single and multiplayer mode. It has a tour mode giving the run down on how to use the application
       </p>
+
+      <Divider />
+	  
+      <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
+        Technology Stack
+      </Typography>
+      <ol>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>React JS (Material UI)</li>
+      </ol>
+	  
+
     </div>
   );
 }

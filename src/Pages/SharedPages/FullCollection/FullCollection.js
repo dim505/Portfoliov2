@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 import Button from "@material-ui/core/Button";
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import "../SharedPages.css"
+import "../SharedPages.scss"
 //look up on mouse over on div
 export default function FullCollection() {
   const [ProjectTiles, SetProjectTiles] = useState([]);

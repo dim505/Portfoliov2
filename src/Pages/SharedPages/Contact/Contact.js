@@ -16,7 +16,7 @@ const validationSchema = Yup.object({
     .required("Email is Required")
 });
 
-//form used to contact landlord with an email (subject and message)
+//form used to contact me with an email (subject and message)
 class Contact extends Component {
   constructor(props) {
     super(props);

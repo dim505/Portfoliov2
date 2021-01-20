@@ -3,6 +3,8 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import FeaturedProjectomp from "./FeaturedProject";
 import Pulse from "react-reveal/Pulse";
+
+//parent component of the featured projects collection  in the home page
 export default function FeaturedCollection() {
   const [FeaturedProjects, SetFeaturedProject] = useState([
     {

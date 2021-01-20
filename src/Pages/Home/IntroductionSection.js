@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 
-
+//this is the first compoent you see on the home page
 const IntroductionSection = () => {
   return (
     <div className="introduction-section">

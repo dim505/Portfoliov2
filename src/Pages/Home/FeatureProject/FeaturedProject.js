@@ -7,6 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import FeaProjText from "./FeaProjText.js";
 import FeaProjImgOverLay from "./FeaProjImgOverLay";
 
+
+//This the feature project component that holds the text and image overlay
 export default function FeaturedProject(props) {
   const RenderComponent = () => {
     if (props.info.CompDirection === "left") {

@@ -1,29 +1,33 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+//holds information related to my CSharp Calc
+
 export default function CSharpCalc(props) {
   return (
     <div>
+      <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
+        Summary
+      </Typography>
+
+      
       <p>
-        This server side calculator is written in C#,HTML and CSS. All the
-        calculations are done on the server. The framework that powers this
-        calculator is ASP.NET Core Razor Pages. Please click{" "}
-        <a
-          href="https://github.com/dim505/WebApp/blob/master/main_portfolio/Pages/Calculator.cshtml"
-          target="_blank"
-        >
-          {" "}
-          here{" "}
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://github.com/dim505/WebApp/blob/master/main_portfolio/Pages/Calculator.cshtml.cs"
-          target="_blank"
-        >
-          {" "}
-          here{" "}
-        </a>{" "}
-        for the source code!
+          I wrote a server side calculator. All calculations are done on the server.
       </p>
+      <Divider />
+      <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
+        Technology stack
+      </Typography>
+
+
+      <ul>
+        <li> HTML</li>
+        <li> CSS</li>
+        <li> C#</li>
+        <li> ASP.NET Core Razor Pages</li>
+        
+      </ul>
+
     </div>
   );
 }

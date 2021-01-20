@@ -6,6 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import SqlServer from "./SQLServer.png";
 import { useMediaQuery } from "react-responsive";
 import Svg from "./svg";
+
+//compoent that holds an summary of my skills
 const Specialties = () => {
   const [value, Setvalue] = React.useState(0);
   const isMobile = useMediaQuery({ query: `(max-width: 750px)` });

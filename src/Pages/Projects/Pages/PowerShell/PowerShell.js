@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import GithubButton from "./GithubButton";
-
+//holds information related to my powershell scripts
 export default function PowerShell(props) {
   return (
     <div>
@@ -23,7 +23,7 @@ export default function PowerShell(props) {
         file.
       </p>
 
-      <GithubButton />
+      <GithubButton website="https://github.com/dim505/Scripts/blob/master/Powershell/APIDnsBackUp.ps1"/>
       <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
         Auto FTP BackUp
       </Typography>

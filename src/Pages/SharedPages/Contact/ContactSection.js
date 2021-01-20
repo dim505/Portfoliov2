@@ -7,6 +7,8 @@ import React, { useEffect, useState, useContext } from "react";
 import ContactModal from "./ContactModal";
 import Fade from "react-reveal/Fade";
 
+
+//this is the contact me footer thats included in several pages
 export default function ContactSection() {
   const [OpnModal, SetOpnModal] = useState(false);
 

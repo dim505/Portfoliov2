@@ -1,5 +1,5 @@
 import React from "react";
-import "./Global.css";
+import "./Global.scss";
 import NavBar from "./Pages/NavBar/Navbar";
 import { Route } from "react-router-dom";
 import AboutMe from "./Pages/AboutMe/AboutMe";
@@ -8,9 +8,14 @@ import ParticlesBg from "particles-bg";
 import Projects from "./Pages/Projects/Projects";
 import ProjectItem from "./Pages/Projects/ProjectItem";
 import ContactSection from "./Pages/SharedPages/Contact/ContactSection";
+import Context from "./context"
+import AppState from "./AppState"
+
 
 export default function App() {
   return (
+
+    <Context.Provider value={ new AppState()} >  
     <div className="App">
       <NavBar />
       <div className="home-layout">
@@ -33,5 +38,10 @@ export default function App() {
         <ParticlesBg color="#808080" num={50} type="cobweb" bg={true} />
       </div>
     </div>
+    </Context.Provider>
   );
+
+
+
+
 }

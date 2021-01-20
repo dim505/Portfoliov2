@@ -7,6 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import { Link } from "react-router-dom";
 
+
+//the text portion of the featured projects section in the home section
 export default function FeaturedProject(props) {
   return (
     <div

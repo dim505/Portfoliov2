@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import Divider from "@material-ui/core/Divider";
 
 export default function PortfolioV1(props) {

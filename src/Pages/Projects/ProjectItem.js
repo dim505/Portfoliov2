@@ -22,22 +22,32 @@ import JavascriptCalc from "./Pages/JavascriptCalc";
 import { ApiCall } from "../../SharedFunctions/ApiCall";
 import { Link } from "react-router-dom";
 import PortfolioV1 from "./Pages/PortfolioV1";
-import "./Project.css"
+import "./Project.scss"
+import {observer} from "mobx-react"
+import Context from "../../context"
 
-export default function ProjectItem(props) {
+
+ 
+//https://auth0.com/blog/managing-the-state-of-react-apps-with-mobx/
+//https://medium.com/@shoaibbhimani1392/getting-started-with-mobx-82306df92d90
+//https://mono.software/2019/04/16/async-webapi-calls-using-react-with-mobx/
+
+//renders each indivual project page depending on what project a user is visiting
+var ProjectItem =  observer ((props) => {
   const [header, SetHeader] = useState("");
-  const [Images, SetImages] = useState([{ original: "" }]);
+  const appState = useContext(Context)
+  console.log("appState")
+  console.log(appState)
+  // const [Images, SetImages] = useState([{ original: "" }]);
 
-  useEffect(() => {
+  //Makes API call to get all the photo urls for the project
+  useEffect( () => {
     window.CurrentIndex = 0;
-    ApiCall(
-      "Get",
-      `${process.env.REACT_APP_BackEndUrl}/api/PortfolioV2/GetPageInfo/${props.match.params.id}`
-    ).then((results) => {
-      console.log(props.match.params.id);
-      SetImages(results);
-    });
+    appState.GetImages(props.match.params.id)
+    appState.ModTest(3)
+    console.log(appState.test)
 
+      //renders the appropriate header name
     if (props.match.params.id === "SocialMedia") {
       SetHeader("Social Media");
     } else if (props.match.params.id === "AMS_TS") {
@@ -52,9 +62,9 @@ export default function ProjectItem(props) {
       SetHeader("Weather App");
     } else if (props.match.params.id === "PythonWikiCrawler") {
       SetHeader("Wiki Crawler");
-    } else if (props.match.params.id === "PythonWikiCrawler") {
+    } else if (props.match.params.id === "AcademicManagementSystem") {
       SetHeader("Academic Management System");
-    } else if (props.match.params.id === "PythonWikiCrawler") {
+    } else if (props.match.params.id === "DocumentManagementSystem") {
       SetHeader("Document Management System");
     } else if (props.match.params.id === "C") {
       SetHeader("C# Calculator");
@@ -67,7 +77,10 @@ export default function ProjectItem(props) {
     }
   }, [props.match.params.id]);
 
+  //renders the appropriate component 
   const RenderPage = () => {
+    window.scrollTo(0, 0)
+
     if (props.match.params.id === "SocialMedia") {
       return <SocialMedia />;
     } else if (props.match.params.id === "AMS_TS") {
@@ -104,10 +117,10 @@ export default function ProjectItem(props) {
       <Typography classes={{ root: "AboutHeader" }} variant="h3" gutterBottom>
         {header}
       </Typography>
-
-      {Images[0].original !== null && Images[0].original !== undefined ? (
+     
+      {appState.Images[0].original !== null && appState.Images[0].original !== undefined ? (
         <Fade delay={1000}>
-          <ImageGallery showPlayButton={false} lazyLoad={true} items={Images} />
+          <ImageGallery showPlayButton={false} lazyLoad={true} items={appState.Images} />
         </Fade>
       ) : (
         <div />
@@ -122,9 +135,9 @@ export default function ProjectItem(props) {
           </Button>
         </Link>
 
-        {Images[0].ProjectGithubLink ? (
+        {appState.Images[0].ProjectGithubLink ? (
           <a
-            href={Images[0].ProjectGithubLink}
+            href={appState.Images[0].ProjectGithubLink}
             target="_blank"
             rel="noreferrer"
           >
@@ -137,8 +150,8 @@ export default function ProjectItem(props) {
           <div />
         )}
 
-        {Images[0].ProjectLiveLink ? (
-          <a href={Images[0].ProjectLiveLink} target="_blank" rel="noreferrer">
+        {appState.Images[0].ProjectLiveLink ? (
+          <a href={appState.Images[0].ProjectLiveLink} target="_blank" rel="noreferrer">
             <Button variant="outlined">
               <OpenInNewIcon />
               Demo
@@ -150,4 +163,6 @@ export default function ProjectItem(props) {
       </div>
     </div>
   );
-}
+        })
+
+export default ProjectItem

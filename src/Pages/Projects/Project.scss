@@ -1,12 +1,14 @@
-
 .ProjectFooter {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
-
 
 .ProjectFooter .MuiButton-label {
   flex-direction: column;
   display: flex !important;
 }
 
+#PythonWikiCrawler a {
+  color: blue !important;
+}
