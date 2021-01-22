@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider"
 
-
+//holds information regarding my social media app
 export default function SocialMedia(props) {
   return (
     <div>

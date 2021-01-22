@@ -5,18 +5,16 @@ import Fade from "react-reveal/Fade";
 import Context from "../../context"
 import {observer} from "mobx-react"
 
-/* contains about for the about page*/
+/* contains info for the about page*/
  function AboutMe() {
-  const TestContext = useContext(Context)
-  console.log(TestContext)
-  TestContext.ModTest(777)
+
   return (
     <Fade>
       <div className="AboutPage">
         <Typography classes={{ root: "AboutHeader" }} variant="h3" gutterBottom>
           A little Introduction
         </Typography>
-        {TestContext.test}
+        
         <Typography
           classes={{ root: "AboutSection" }}
           variant="h5"

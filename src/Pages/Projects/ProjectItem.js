@@ -27,14 +27,13 @@ import {observer} from "mobx-react"
 import Context from "../../context"
 
 
- 
-//https://auth0.com/blog/managing-the-state-of-react-apps-with-mobx/
-//https://medium.com/@shoaibbhimani1392/getting-started-with-mobx-82306df92d90
-//https://mono.software/2019/04/16/async-webapi-calls-using-react-with-mobx/
+  
 
 //renders each indivual project page depending on what project a user is visiting
-var ProjectItem =  observer ((props) => {
-  const [header, SetHeader] = useState("");
+function ProjectItem  (props) {
+	//sets header for the page
+  const [Header, SetHeader] = useState("");
+  //gets the app global state
   const appState = useContext(Context)
   console.log("appState")
   console.log(appState)
@@ -43,6 +42,7 @@ var ProjectItem =  observer ((props) => {
   //Makes API call to get all the photo urls for the project
   useEffect( () => {
     window.CurrentIndex = 0;
+	//gets image links
     appState.GetImages(props.match.params.id)
     appState.ModTest(3)
     console.log(appState.test)
@@ -115,7 +115,7 @@ var ProjectItem =  observer ((props) => {
   return (
     <div>
       <Typography classes={{ root: "AboutHeader" }} variant="h3" gutterBottom>
-        {header}
+        {Header}
       </Typography>
      
       {appState.Images[0].original !== null && appState.Images[0].original !== undefined ? (
@@ -163,6 +163,6 @@ var ProjectItem =  observer ((props) => {
       </div>
     </div>
   );
-        })
+        }
 
-export default ProjectItem
+export default observer(ProjectItem)

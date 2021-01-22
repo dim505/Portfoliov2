@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
+
+//holds information regarding my first portfolio
 export default function PortfolioV1(props) {
   return (
     <div>

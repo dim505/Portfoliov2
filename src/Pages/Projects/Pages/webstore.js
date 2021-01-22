@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider"
 
+//holds information about my webstore
 export default function webstore(props) {
   return (
     <div>

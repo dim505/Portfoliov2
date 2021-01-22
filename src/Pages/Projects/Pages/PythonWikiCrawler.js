@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
+//holds information about my python crawler script
 export default function PythonWikiCrawler(props) {
   return (
     <div id="PythonWikiCrawler">

@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 
-
+//holds information regarding my javascript calculator
 export default function JavascriptCalc(props) {
   return (
     <div>

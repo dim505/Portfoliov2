@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider"
-
+//holds information regarding my weather app
 export default function weatherapp(props) {
   return (
     <div>

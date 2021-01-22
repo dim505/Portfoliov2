@@ -11,7 +11,7 @@ import ContactSection from "./Pages/SharedPages/Contact/ContactSection";
 import Context from "./context"
 import AppState from "./AppState"
 
-
+//parent component that holds the website subcompoents
 export default function App() {
   return (
 

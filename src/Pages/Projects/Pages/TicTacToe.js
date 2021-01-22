@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider"
 
+
+//holds information regarding my tic tac toe game
 export default function TicTacToe(props) {
   return (
     <div>

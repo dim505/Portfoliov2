@@ -9,6 +9,8 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import Tooltip from "@material-ui/core/Tooltip";
 
+
+//holds code that displays file in the full collection page
 export default function ProjectTile(props) {
   const [Hover, IsHovering] = useState(false);
 
