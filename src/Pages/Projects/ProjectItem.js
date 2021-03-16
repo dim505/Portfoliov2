@@ -25,9 +25,9 @@ import PortfolioV1 from "./Pages/PortfolioV1";
 import "./Project.scss"
 import {observer} from "mobx-react"
 import Context from "../../context"
-
-
-  
+import CryptoTracker from "./Pages/CryptoTracker"
+import CovidTracker from "./Pages/CovidTracker"
+import Tweeder from "./Pages/Tweeder"
 
 //renders each indivual project page depending on what project a user is visiting
 function ProjectItem  (props) {
@@ -74,13 +74,18 @@ function ProjectItem  (props) {
       SetHeader("PowerShell Scripts");
     } else if (props.match.params.id === "PortfolioV1") {
       SetHeader("Portfolio V1");
+    } else if (props.match.params.id === "CryptoTracker") {
+      SetHeader("Cryptocurrency Tracker")
     }
-  }, [props.match.params.id]);
+    else if (props.match.params.id === "CovidTracker") {
+      SetHeader("Covid Tracker")
+    }
+    
+  }, [props.match.url]);
 
   //renders the appropriate component 
   const RenderPage = () => {
-    window.scrollTo(0, 0)
-
+ 
     if (props.match.params.id === "SocialMedia") {
       return <SocialMedia />;
     } else if (props.match.params.id === "AMS_TS") {
@@ -107,7 +112,15 @@ function ProjectItem  (props) {
       return <PowerShell />;
     } else if (props.match.params.id === "PortfolioV1") {
       return <PortfolioV1 />;
+    } else if (props.match.params.id === "CryptoTracker") {
+      return <CryptoTracker />;
+    } else if (props.match.params.id === "CovidTracker") {
+      return <CovidTracker />;
+    } else if (props.match.params.id === "Tweeder") {
+        return <Tweeder />
+
     }
+
 
     //
   };

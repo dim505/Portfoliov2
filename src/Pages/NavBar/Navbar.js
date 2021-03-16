@@ -14,7 +14,7 @@ const NavBar = () => {
         to="/"
       >
         <Button>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4">
             DK
           </Typography>
         </Button>

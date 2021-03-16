@@ -1,19 +1,24 @@
-
 .home-header {
   width: 100%;
   display: flex;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
 }
-
-
 
 .NavButtonsGroup {
   width: 100%;
   display: flex;
+  margin-right: 20px;
 }
 
 .flex-end {
   justify-content: flex-end;
+  align-items: center;
 }
+
+
 
 
 /*SCROLL BAR CSS*/
