@@ -23,15 +23,21 @@ import { ApiCall } from "../../SharedFunctions/ApiCall";
 import { Link } from "react-router-dom";
 import PortfolioV1 from "./Pages/PortfolioV1";
 import "./Project.scss"
-import {observer} from "mobx-react"
+import { observer } from "mobx-react"
 import Context from "../../context"
 import CryptoTracker from "./Pages/CryptoTracker"
 import CovidTracker from "./Pages/CovidTracker"
 import Tweeder from "./Pages/Tweeder"
+import Productshowcasing from "./Pages/3DProductShowcasing"
+import CameraAngle from "./Pages/3DSphereCameraAngle"
+import Donut from "./Pages/3DDonut"
+import Carousel from "./Pages/3DCarousel"
+import Portfolio from "./Pages/3dPortfolio"
+
 
 //renders each indivual project page depending on what project a user is visiting
-function ProjectItem  (props) {
-	//sets header for the page
+function ProjectItem(props) {
+  //sets header for the page
   const [Header, SetHeader] = useState("");
   //gets the app global state
   const appState = useContext(Context)
@@ -40,14 +46,14 @@ function ProjectItem  (props) {
   // const [Images, SetImages] = useState([{ original: "" }]);
 
   //Makes API call to get all the photo urls for the project
-  useEffect( () => {
+  useEffect(() => {
     window.CurrentIndex = 0;
-	//gets image links
+    //gets image links
     appState.GetImages(props.match.params.id)
     appState.ModTest(3)
     console.log(appState.test)
 
-      //renders the appropriate header name
+    //renders the appropriate header name
     if (props.match.params.id === "SocialMedia") {
       SetHeader("Social Media");
     } else if (props.match.params.id === "AMS_TS") {
@@ -79,13 +85,32 @@ function ProjectItem  (props) {
     }
     else if (props.match.params.id === "CovidTracker") {
       SetHeader("Covid Tracker")
+    } else if (props.match.params.id === "3DProductShowcasing") {
+      SetHeader("3D Product Showcasing")
+    } else if (props.match.params.id === "3D Sphere Camera Angle") {
+      SetHeader("3D Light Angle")
+    } else if (props.match.params.id === "3DDonut") {
+      SetHeader("3DDonut")
+    } else if (props.match.params.id === "Tweeder") {
+      SetHeader("Tweeder")
+    }else if (props.match.params.id === "3DCarousel") {
+      SetHeader("3D Carousel")
+    } else if (props.match.params.id === "3dPortfolio") {
+      SetHeader("3d Portfolio")
     }
+    else if (props.match.params.id === "3DSphereCameraAngle") {
+      SetHeader("Camera Angle")
+    }
+
+
     
-  }, [props.match.url]);
+
+  }, [props.match.params.id]);
 
   //renders the appropriate component 
   const RenderPage = () => {
- 
+    window.scrollTo(0, 0)
+
     if (props.match.params.id === "SocialMedia") {
       return <SocialMedia />;
     } else if (props.match.params.id === "AMS_TS") {
@@ -117,20 +142,35 @@ function ProjectItem  (props) {
     } else if (props.match.params.id === "CovidTracker") {
       return <CovidTracker />;
     } else if (props.match.params.id === "Tweeder") {
-        return <Tweeder />
-
+      return <Tweeder />
+    } else if (props.match.params.id === "3DProductShowcasing") {
+      return <Productshowcasing />
+    }
+    else if (props.match.params.id === "3DSphereCameraAngle") {
+      return <CameraAngle />
+    }
+    else if (props.match.params.id === "3DDonut") {
+      return <Donut />
+    } else if (props.match.params.id === "3DCarousel") {
+      return <Carousel />
+    }else if (props.match.params.id === "3dPortfolio") {
+      return <Portfolio />
     }
 
-
+    
     //
   };
 
   return (
     <div>
+      <Typography classes={{ root: "AboutHeader" }} variant="h4" gutterBottom>
+        {Header}
+      </Typography>
+
       <Typography classes={{ root: "AboutHeader" }} variant="h3" gutterBottom>
         {Header}
       </Typography>
-     
+
       {appState.Images[0].original !== null && appState.Images[0].original !== undefined ? (
         <Fade delay={1000}>
           <ImageGallery showPlayButton={false} lazyLoad={true} items={appState.Images} />
@@ -176,6 +216,6 @@ function ProjectItem  (props) {
       </div>
     </div>
   );
-        }
+}
 
 export default observer(ProjectItem)
