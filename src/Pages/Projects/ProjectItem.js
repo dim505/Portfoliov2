@@ -33,7 +33,7 @@ import CameraAngle from "./Pages/3DSphereCameraAngle"
 import Donut from "./Pages/3DDonut"
 import Carousel from "./Pages/3DCarousel"
 import Portfolio from "./Pages/3dPortfolio"
-
+import NewsAggregator  from "./Pages/NewsAggregator";
 
 //renders each indivual project page depending on what project a user is visiting
 function ProjectItem(props) {
@@ -100,7 +100,10 @@ function ProjectItem(props) {
     }
     else if (props.match.params.id === "3DSphereCameraAngle") {
       SetHeader("Camera Angle")
+    }    else if (props.match.params.id === "NewsAggregator") {
+      SetHeader("News Aggregator")
     }
+
 
 
     
@@ -155,7 +158,11 @@ function ProjectItem(props) {
       return <Carousel />
     }else if (props.match.params.id === "3dPortfolio") {
       return <Portfolio />
+    }else if (props.match.params.id === "NewsAggregator") {
+      return <NewsAggregator />
     }
+
+    
 
     
     //

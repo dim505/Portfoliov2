@@ -16,7 +16,7 @@ const IntroductionSection = () => {
         </Typography>
 
         <Typography display="block" variant="h5" gutterBottom>
-          Aspiring Software Developer
+          Aspiring Full Stack Software Developer
         </Typography>
         <Typography variant="body2" gutterBottom>
           "They don't make bugs like Bunny anymore" -Anonymous
