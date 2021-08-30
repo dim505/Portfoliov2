@@ -6,6 +6,10 @@ import Typography from "@material-ui/core/Typography";
 export default function CryptoTracker(props) { 
         return (
             <div>
+
+<Typography classes={{ root: "AboutSection" }} variant="h6" gutterBottom>
+              ***Please note, the Coincap API is severely throttling use of its public API causing problems with the CryptoTracker. You might experience issues when using this app ***
+            </Typography>
             <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
               Summary
             </Typography>

@@ -12,7 +12,7 @@ const Tweeder = () => {
             </Typography>
       
             <p>
-            This web app will be a Twitter inspired clone
+            This web app will be a Twitter inspired clone <b>***Currently, Application development for this project is on pause*** </b>
             </p>
                   <Divider />
             <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>

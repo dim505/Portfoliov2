@@ -11,7 +11,7 @@ export default function CameraAngle(props) {
             </Typography>
 
             <p>
-                This app demonstrates the different lighting you can put in a THREE JS Scene. I made the project in order to get a better idea on how lighting works in a scene. I have various lights with different colors pointing at the dice so you can differentiate the lights from one and other. You can also change the light colors.
+                This app demonstrates the different lighting you can put in a THREE JS Scene. I made the project in order to get a better idea on how lighting works in a scene. I have various lights with different colors pointing at the dice so you can differentiate the lights from one and other. You can also change the light colors.  <b> *** This application is currently being debugged.*** </b>
             </p>
             <Divider />
             <Typography classes={{ root: "AboutSection" }} variant="h5" gutterBottom>
