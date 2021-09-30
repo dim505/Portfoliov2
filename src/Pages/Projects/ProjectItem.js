@@ -34,6 +34,7 @@ import Donut from "./Pages/3DDonut"
 import Carousel from "./Pages/3DCarousel"
 import Portfolio from "./Pages/3dPortfolio"
 import NewsAggregator  from "./Pages/NewsAggregator";
+import Youtube from "./Pages/Youtube"
 
 //renders each indivual project page depending on what project a user is visiting
 function ProjectItem(props) {
@@ -103,6 +104,9 @@ function ProjectItem(props) {
     }    else if (props.match.params.id === "NewsAggregator") {
       SetHeader("News Aggregator")
     }
+     else if (props.match.params.id === "Youtube") {
+    SetHeader("Youtube")
+  }
 
 
 
@@ -160,6 +164,9 @@ function ProjectItem(props) {
       return <Portfolio />
     }else if (props.match.params.id === "NewsAggregator") {
       return <NewsAggregator />
+    }
+    else if (props.match.params.id === "Youtube") {
+      return <Youtube />
     }
 
     
