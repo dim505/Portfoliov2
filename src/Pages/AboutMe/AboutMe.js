@@ -25,10 +25,10 @@ import {observer} from "mobx-react"
 
         <Typography variant="subtitle1" gutterBottom>
           Hello, My name is Dmitriy. I'm a motivated technology enthusiast that
-          is eager to become a software developer that graduated with a
-          Bachelors of Science in Computer Information Systems. Professional
+            graduated with a
+            bachelor's of Science in Computer Information Systems. Professional
           experience includes providing software and hardware support, website
-          management, Powershell automation, and SQL Report writing.
+          management, PowerShell automation, software development, and SQL report writing.
         </Typography>
 
         <Typography
@@ -42,7 +42,7 @@ import {observer} from "mobx-react"
         <Typography variant="subtitle1" gutterBottom>
           <ul>
             <li>
-              <p> Bachcelors of Science in Computer Information Systems </p>
+              <p> Bachelor's of Science in Computer Information Systems </p>
               <p> Deans List, 3.7 GPA</p>
             </li>
           </ul>
@@ -59,19 +59,18 @@ import {observer} from "mobx-react"
         <Typography variant="subtitle1" gutterBottom>
           <ul>
             <li>
-              <p> 2 years </p>
+              <p> 4 years: </p>
               <ol>
                 <li>
                   <p>
-                    Expanding my portfolio mainly constanting of build web
-                    appplications (React JS, .Net Core, SQL){" "}
+                    Expanding my web portfolio mainly consisting of web
+                    applications (React JS, .Net Core, SQL){" "}
                   </p>
                 </li>
                 <li>
                   <p>
-                    PROFESSIONAL EXPERIENCE: SQL Report writing, Resolving
-                    Application database related issues, Database maintaince,
-                    and Powershell Automation{" "}
+                    Professional Experience: SQL report writing, resolving
+                    application database issues, database maintenance, Powershell automation, and full stack development{" "}
                   </p>
                 </li>
               </ol>

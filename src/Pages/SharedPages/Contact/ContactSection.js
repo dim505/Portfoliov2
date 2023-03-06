@@ -17,7 +17,7 @@ export default function ContactSection() {
    <Fade> 
     <div className="contact-section SectionPadding">
       <Typography variant="h5" gutterBottom>
-        Feel Free to reach out
+        Feel free to reach out
       </Typography>
 
       <Typography variant="subtitle1" gutterBottom>
